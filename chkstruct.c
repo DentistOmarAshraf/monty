@@ -25,3 +25,20 @@ void chkstruct(stack_t *head)
 		ptr = ptr->prev;
 	}
 }
+/**
+ * print_list - function to print linked list
+ * @head: pointer to head of linked list
+ * Return: size_t
+ */
+size_t print_list(stack_t *head)
+{
+	size_t count = 0;
+
+	while (head)
+	{
+		printf("%d\n", head->n);
+		head = head->next;
+		count++;
+	}
+	return (count);
+}
